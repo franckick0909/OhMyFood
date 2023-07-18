@@ -1,0 +1,1998 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* <--- Reset CSS  */
+  list-style: none;
+  scroll-behavior: smooth;
+  text-decoration: none;
+}
+
+html {
+  font-size: 100%; /* <--- Changement de la font-size sur tout le site au besoin...  */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-container { /* <--- main-container de la page d'accueil -- index.html  */
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  padding: 0 3.125rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media screen and (max-width: 992px) {
+  .main-container {
+    padding: 0 3.125rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-container {
+    padding: 0 1.5625rem;
+  }
+}
+
+section { /* <--- Section de la page d'acceuil  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+}
+
+.box-title { /* <--- Disposition des titres, entrées, plats, desserts  */
+  display: flex;
+  text-transform: uppercase;
+  padding-bottom: 1.125rem;
+}
+.box-title h2 {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.box-title h2::before { /* <--- Création du trait en dessous des titres, entrées, plats, desserts  */
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: #99E2D0;
+}
+
+/* <--- Animation de la languette verte avec l'icon check  */
+.box__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  text-align: center;
+  width: 0;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.box__icon .fa-check {
+  background: #fff;
+  margin-left: 15px;
+  font-size: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  color: #99E2D0;
+  border-radius: 50%;
+  transform: rotate(360deg);
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.fa-check {
+  background: #fff;
+  margin-left: 15px;
+  font-size: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  color: #99E2D0;
+  border-radius: 50%;
+  transform: rotate(360deg);
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.tag-container:hover .fa-check {
+  -o-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  margin-left: 0px;
+}
+
+.tag-container:hover .box__icon {
+  width: 5rem;
+}
+
+/* <--- FIN de l'animation de la languette verte avec l'icon check  */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 1.75rem;
+  font-style: italic;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.0625rem;
+}
+
+.text {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+.title-box {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h6 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: #fff;
+  font-style: italic;
+}
+
+/*
+button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2.75rem;
+}
+*/
+.btn {
+  display: inline-flex;
+  background-image: linear-gradient(0deg, hsl(267, 66%, 60%), hsl(317, 100%, 74%));
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  cursor: pointer;
+  padding: 1rem;
+  color: #fff;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  animation: slide-bottom 1.5s 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  -webkit-animation: slide-bottom 1.5s 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+.btn:hover {
+  -o-transform: translateY(-2px);
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  background-image: linear-gradient(0deg, hsl(267, 66%, 65%), hsl(317, 100%, 79%));
+  box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation NOUVEAU */
+.nouveau {
+  background: #99E2D0;
+  color: #008766;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  opacity: 1;
+  -webkit-animation: new 1s linear infinite alternate-reverse;
+  animation: new 1s linear infinite alternate-reverse;
+}
+
+@keyframes new {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Animation SLIDE-UP */
+@keyframes slide-up {
+  from {
+    -o-transform: translateY(-80px);
+    -webkit-transform: translateY(-80px);
+    -moz-transform: translateY(-80px);
+    -ms-transform: translateY(-80px);
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  to {
+    -o-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+/* Animation SLIDE-BOTTOM */
+@keyframes slide-bottom {
+  from {
+    -o-transform: translateY(50px);
+    -webkit-transform: translateY(50px);
+    -moz-transform: translateY(50px);
+    -ms-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    -o-transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+/* Animation SLIDE-RIGHT */
+@keyframes slide-right {
+  from {
+    -o-transform: translateX(-80px);
+    -webkit-transform: translateX(-80px);
+    -moz-transform: translateX(-80px);
+    -ms-transform: translateX(-80px);
+    transform: translateX(-80px);
+    opacity: 0;
+  }
+  to {
+    -o-transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+/* Animation SLIDE-LEFT */
+@keyframes slide-left {
+  from {
+    -o-transform: translateX(80px);
+    -webkit-transform: translateX(80px);
+    -moz-transform: translateX(80px);
+    -ms-transform: translateX(80px);
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  to {
+    -o-transform: translateX(0px);
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+}
+/* Animation FADE */
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*  Animation pulse  */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(147, 86, 220, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(147, 86, 220, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(147, 86, 220, 0);
+  }
+}
+/*  Animation Loading barre de chargement */
+@keyframes loading {
+  0% {
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+  }
+}
+/*  Animation Loading  Invisible après 3.5s  */
+@keyframes content-loader {
+  0% {
+    visibility: visible;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+header .logo {
+  width: 13rem;
+  padding: 1.2rem 0;
+  -webkit-animation: slide-up 1.5s 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-up 1.5s 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+header .logo__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+form {
+  width: 100%;
+  margin: 0 auto;
+}
+form .input-group {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .input-group input {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.125rem;
+  width: 100%;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  outline: none;
+  -webkit-text-fill-color: #353535;
+  background: #EAEAEA;
+  -webkit-animation: fade 1.5s 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: fade 1.5s 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+form .input-group i {
+  display: inline-flex;
+  justify-content: center;
+  position: absolute;
+  margin-right: 11rem;
+  font-size: 1.25rem;
+  color: #353535;
+  -webkit-animation: fade 1.5s 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: fade 1.5s 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+/*
+.nav {
+    padding-right: $layout-margin;
+    flex: 2 1 auto;
+    text-align: right;
+    &__link {
+        display: inline;
+        font-size: 3rem;
+        padding-left: 1.5rem;
+        & a{
+        text-decoration: none;
+        color: $colour-accent;
+        }
+        &--active {
+            color: $colour-secondary;
+            &:hover{
+                cursor:default;
+                color: $colour-secondary;
+            }
+        }
+        & a:hover{
+            color: $colour-white;
+        }
+    }
+}
+*/
+footer {
+  background: #353535;
+  display: inline-block;
+}
+footer .footer-content {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 4rem 3rem 1.5rem 2rem;
+  gap: 1rem;
+}
+@media screen and (max-width: 600px) {
+  footer .footer-content {
+    flex-direction: column;
+    padding: 1rem 0 2rem 2rem;
+    gap: 0rem;
+  }
+}
+footer .footer-content__logo {
+  position: absolute;
+  color: #fff;
+  display: flex;
+}
+@media screen and (max-width: 600px) {
+  footer .footer-content__logo {
+    position: static;
+  }
+}
+footer .footer-content__text-icon {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 600px) {
+  footer .footer-content__text-icon {
+    flex-direction: column;
+    padding-top: 1.5rem;
+  }
+}
+footer .footer-content__text-icon .text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #fff;
+  padding-bottom: 0.5rem;
+  padding-right: 5px;
+}
+footer .footer-content__text-icon .text .fa-utensils {
+  margin: 0 12px 0;
+}
+@media screen and (max-width: 600px) {
+  footer .footer-content__text-icon .text .fa-utensils {
+    margin: 0 12px 0 0;
+  }
+}
+footer .footer-content__text-icon .text .fa-handshake {
+  margin: 0 12px;
+  -o-transform: rotate(-25deg);
+  -webkit-transform: rotate(-25deg);
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+}
+@media screen and (max-width: 600px) {
+  footer .footer-content__text-icon .text .fa-handshake {
+    margin: 0 6px 0 0;
+  }
+}
+footer .footer-content__mention-mail {
+  display: flex;
+  flex-direction: row;
+  padding: 0 12rem 0 2rem;
+  gap: 1rem;
+}
+@media screen and (max-width: 600px) {
+  footer .footer-content__mention-mail {
+    flex-direction: column;
+    padding: 0.5rem 8rem 0 0;
+    gap: 0;
+  }
+}
+footer .footer-content__mention-mail .text2 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #fff;
+  padding-bottom: 0.5rem;
+}
+
+/*  Un footer en relatif et "bottom: -22rem;", pour compenser le "top: 22rem;" de la "balise main"  */
+.footer-menu {
+  background: #353535;
+  position: relative;
+  bottom: -22rem;
+  display: block;
+}
+
+/*
+.form {
+    width: 100%;
+    padding-bottom: $grid-gutter;
+    &__heading {
+        width: 100%;
+        color: $colour-white;
+        @include heading-shadow;
+        background: $colour-primary;
+        line-height: 5rem;
+        padding: $grid-gutter;
+    }
+    &__field {
+        & label {
+            color: $colour-accent;
+            display: block;
+            font-size: 2rem;
+            line-height: 2rem;
+            padding-top: $grid-gutter;
+        }
+        & input {
+            width: 100%;
+            background: $colour-secondary;
+            @include border;
+            padding: $grid-gutter;
+            color: $colour-accent;
+            font-weight: 900;
+            font-style: italic;
+            font-size: 2.75rem;
+            @include border;
+            background-color: $colour-secondary;
+            color: $colour-primary;
+
+        }
+        & textarea {
+            width: 100%;
+            color: $colour-primary;
+            background: $colour-secondary;
+            @include border;
+            outline: none;
+            padding: $grid-gutter;
+            margin-bottom: $grid-gutter*0.5;
+        }
+    }
+}
+
+*/
+/*  header-menu  */
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 3.125rem;
+  overflow: hidden;
+}
+.header-menu .logo {
+  width: 13rem;
+  padding: 1.2rem 0;
+  -webkit-animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+.header-menu .logo__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.header-menu .arrow {
+  position: absolute;
+  left: 3.125rem;
+  -webkit-animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+.header-menu .arrow i {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #353535;
+}
+
+/*  Image du menu, en position: absolute; */
+.img-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 4.9rem;
+  width: 100%;
+  height: 24rem;
+}
+.img-menu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/*  Conteneur global "main", suivi,
+
+    du container qui englobe tout ce qu'il y a a l'intérieur.  */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  padding: 0 6.25rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: 22rem;
+}
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 0 0rem;
+  }
+}
+.main__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #F6F6F6;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+}
+@media screen and (max-width: 600px) {
+  .main__container {
+    padding: 0 0.5rem;
+  }
+}
+
+/*  Menu title avec la Palette du goût, avec le coeur */
+.title-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .title-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    padding-top: 1rem;
+  }
+}
+.title-menu__heart { /* <--- Le coeur du menu-title  */
+  position: relative;
+  color: black;
+}
+.title-menu__heart i {
+  position: absolute;
+  top: -0.7rem;
+  left: 0;
+  font-size: 1.375rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+@media screen and (max-width: 600px) {
+  .title-menu__heart {
+    left: -2rem;
+  }
+}
+.title-menu__heart .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  -o-transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  animation: pulse 2s 0s infinite ease;
+  -webkit-animation: pulse 2s 0s infinite ease;
+}
+.title-menu__heart .fa-solid:hover {
+  opacity: 1;
+}
+
+/*  Conteneur des 3 box, et des 3 languettes  */
+.content-box {
+  background: #F6F6F6;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/*  Conteneur  des 3 languettes  */
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  width: 100%;
+}
+.box .tag-container {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  justify-content: space-between;
+  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+  gap: 0.3125rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.box .tag-container__tag {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box .tag-container__tag h4, .box .tag-container__tag p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box .tag-container__price {
+  position: relative;
+  display: block;
+  padding-top: 2.2rem;
+}
+
+/* Bouton en dégradé en dessous de "content-box"  */
+.btn-menu {
+  display: block;
+  padding: 2rem 0;
+}
+
+/*  Animations des languettes  */
+.tag-1, .tag-2, .tag-3 {
+  -webkit-animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-4, .tag-5, .tag-6 {
+  -webkit-animation: slide-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-7, .tag-8, .tag-9 {
+  -webkit-animation: slide-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-1 {
+  animation-delay: 0.1s;
+}
+
+.tag-2 {
+  animation-delay: 0.4s;
+}
+
+.tag-3 {
+  animation-delay: 0.7s;
+}
+
+.tag-4 {
+  animation-delay: 0.7s;
+}
+
+.tag-5 {
+  animation-delay: 1s;
+}
+
+.tag-6 {
+  animation-delay: 1.3s;
+}
+
+.tag-7 {
+  animation-delay: 0.1s;
+}
+
+.tag-8 {
+  animation-delay: 0.4s;
+}
+
+.tag-9 {
+  animation-delay: 0.7s;
+}
+
+/*  header-menu  */
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 3.125rem;
+  overflow: hidden;
+}
+.header-menu .logo {
+  width: 13rem;
+  padding: 1.2rem 0;
+  -webkit-animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+.header-menu .logo__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.header-menu .arrow {
+  position: absolute;
+  left: 3.125rem;
+  -webkit-animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+.header-menu .arrow i {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #353535;
+}
+
+/*  Image du menu, en position: absolute; */
+.img-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 4.9rem;
+  width: 100%;
+  height: 24rem;
+}
+.img-menu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/*  Conteneur global "main", suivi,
+
+    du container qui englobe tout ce qu'il y a a l'intérieur.  */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  padding: 0 6.25rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: 22rem;
+}
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 0 0rem;
+  }
+}
+.main__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #F6F6F6;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+}
+@media screen and (max-width: 600px) {
+  .main__container {
+    padding: 0 0.5rem;
+  }
+}
+
+/*  Menu title avec la Palette du goût, avec le coeur */
+.title-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .title-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    padding-top: 1rem;
+  }
+}
+.title-menu__heart { /* <--- Le coeur du menu-title  */
+  position: relative;
+  color: black;
+}
+.title-menu__heart i {
+  position: absolute;
+  top: -0.7rem;
+  left: 0;
+  font-size: 1.375rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+@media screen and (max-width: 600px) {
+  .title-menu__heart {
+    left: -2rem;
+  }
+}
+.title-menu__heart .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  -o-transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  animation: pulse 2s 0s infinite ease;
+  -webkit-animation: pulse 2s 0s infinite ease;
+}
+.title-menu__heart .fa-solid:hover {
+  opacity: 1;
+}
+
+/*  Conteneur des 3 box, et des 3 languettes  */
+.content-box {
+  background: #F6F6F6;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/*  Conteneur  des 3 languettes  */
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  width: 100%;
+}
+.box .tag-container {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  justify-content: space-between;
+  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+  gap: 0.3125rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.box .tag-container__tag {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box .tag-container__tag h4, .box .tag-container__tag p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box .tag-container__price {
+  position: relative;
+  display: block;
+  padding-top: 2.2rem;
+}
+
+.box-1 {
+  position: relative; /*  <--  Repositionnement de la box-1, à cause de la 4ème languettes*/
+  top: 2.875rem;
+}
+@media screen and (max-width: 1255px) {
+  .box-1 {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 1255px) {
+  .box-2 {
+    position: relative;
+    bottom: 2.875rem;
+  }
+}
+@media screen and (max-width: 903px) {
+  .box-2 {
+    position: static;
+  }
+}
+
+/* Bouton en dégradé en dessous de "content-box"  */
+.btn-menu {
+  display: block;
+  padding: 2rem 0;
+}
+
+/*  Animations des languettes  */
+.tag-1, .tag-2, .tag-3, .tag-44 {
+  -webkit-animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-4, .tag-5, .tag-6 {
+  -webkit-animation: slide-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-7, .tag-8, .tag-9 {
+  -webkit-animation: slide-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-1 {
+  animation-delay: 0.1s;
+}
+
+.tag-2 {
+  animation-delay: 0.4s;
+}
+
+.tag-3 {
+  animation-delay: 0.7s;
+}
+
+.tag-44 {
+  animation-delay: 1s;
+}
+
+.tag-4 {
+  animation-delay: 1s;
+}
+
+.tag-5 {
+  animation-delay: 1.3s;
+}
+
+.tag-6 {
+  animation-delay: 1.6s;
+}
+
+.tag-7 {
+  animation-delay: 0.1s;
+}
+
+.tag-8 {
+  animation-delay: 0.4s;
+}
+
+.tag-9 {
+  animation-delay: 0.7s;
+}
+
+/*  header-menu  */
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 3.125rem;
+  overflow: hidden;
+}
+.header-menu .logo {
+  width: 13rem;
+  padding: 1.2rem 0;
+  -webkit-animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+.header-menu .logo__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.header-menu .arrow {
+  position: absolute;
+  left: 3.125rem;
+  -webkit-animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+.header-menu .arrow i {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #353535;
+}
+
+/*  Image du menu, en position: absolute; */
+.img-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 4.9rem;
+  width: 100%;
+  height: 24rem;
+}
+.img-menu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/*  Conteneur global "main", suivi,
+
+    du container qui englobe tout ce qu'il y a a l'intérieur.  */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  padding: 0 6.25rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: 22rem;
+}
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 0 0rem;
+  }
+}
+.main__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #F6F6F6;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+}
+@media screen and (max-width: 600px) {
+  .main__container {
+    padding: 0 0.5rem;
+  }
+}
+
+/*  Menu title avec la Palette du goût, avec le coeur */
+.title-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .title-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    padding-top: 1rem;
+  }
+}
+.title-menu__heart { /* <--- Le coeur du menu-title  */
+  position: relative;
+  color: black;
+}
+.title-menu__heart i {
+  position: absolute;
+  top: -0.7rem;
+  left: 0;
+  font-size: 1.375rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+@media screen and (max-width: 600px) {
+  .title-menu__heart {
+    left: -2rem;
+  }
+}
+.title-menu__heart .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  -o-transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  animation: pulse 2s 0s infinite ease;
+  -webkit-animation: pulse 2s 0s infinite ease;
+}
+.title-menu__heart .fa-solid:hover {
+  opacity: 1;
+}
+
+/*  Conteneur des 3 box, et des 3 languettes  */
+.content-box {
+  background: #F6F6F6;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/*  Conteneur  des 3 languettes  */
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  width: 100%;
+}
+.box .tag-container {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  justify-content: space-between;
+  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+  gap: 0.3125rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.box .tag-container__tag {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box .tag-container__tag h4, .box .tag-container__tag p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box .tag-container__price {
+  position: relative;
+  display: block;
+  padding-top: 2.2rem;
+}
+
+/* Bouton en dégradé en dessous de "content-box"  */
+.btn-menu {
+  display: block;
+  padding: 2rem 0;
+}
+
+/*  Animations des languettes  */
+.tag-1, .tag-2, .tag-3 {
+  -webkit-animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-4, .tag-5, .tag-6 {
+  -webkit-animation: slide-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-7, .tag-8, .tag-9 {
+  -webkit-animation: slide-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-1 {
+  animation-delay: 0.1s;
+}
+
+.tag-2 {
+  animation-delay: 0.4s;
+}
+
+.tag-3 {
+  animation-delay: 0.7s;
+}
+
+.tag-4 {
+  animation-delay: 0.7s;
+}
+
+.tag-5 {
+  animation-delay: 1s;
+}
+
+.tag-6 {
+  animation-delay: 1.3s;
+}
+
+.tag-7 {
+  animation-delay: 0.1s;
+}
+
+.tag-8 {
+  animation-delay: 0.4s;
+}
+
+.tag-9 {
+  animation-delay: 0.7s;
+}
+
+/*  header-menu  */
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 3.125rem;
+  overflow: hidden;
+}
+.header-menu .logo {
+  width: 13rem;
+  padding: 1.2rem 0;
+  -webkit-animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+.header-menu .logo__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.header-menu .arrow {
+  position: absolute;
+  left: 3.125rem;
+  -webkit-animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+.header-menu .arrow i {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #353535;
+}
+
+/*  Image du menu, en position: absolute; */
+.img-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 4.9rem;
+  width: 100%;
+  height: 24rem;
+}
+.img-menu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/*  Conteneur global "main", suivi,
+
+    du container qui englobe tout ce qu'il y a a l'intérieur.  */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  padding: 0 6.25rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: 22rem;
+}
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 0 0rem;
+  }
+}
+.main__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #F6F6F6;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+}
+@media screen and (max-width: 600px) {
+  .main__container {
+    padding: 0 0.5rem;
+  }
+}
+
+/*  Menu title avec la Palette du goût, avec le coeur */
+.title-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .title-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    padding-top: 1rem;
+  }
+}
+.title-menu__heart { /* <--- Le coeur du menu-title  */
+  position: relative;
+  color: black;
+}
+.title-menu__heart i {
+  position: absolute;
+  top: -0.7rem;
+  left: 0;
+  font-size: 1.375rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+@media screen and (max-width: 600px) {
+  .title-menu__heart {
+    left: -2rem;
+  }
+}
+.title-menu__heart .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  -o-transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  animation: pulse 2s 0s infinite ease;
+  -webkit-animation: pulse 2s 0s infinite ease;
+}
+.title-menu__heart .fa-solid:hover {
+  opacity: 1;
+}
+
+/*  Conteneur des 3 box, et des 3 languettes  */
+.content-box {
+  background: #F6F6F6;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/*  Conteneur  des 3 languettes  */
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  width: 100%;
+}
+.box .tag-container {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  justify-content: space-between;
+  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
+  gap: 0.3125rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+.box .tag-container__tag {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box .tag-container__tag h4, .box .tag-container__tag p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box .tag-container__price {
+  position: relative;
+  display: block;
+  padding-top: 2.2rem;
+}
+
+/* Bouton en dégradé en dessous de "content-box"  */
+.btn-menu {
+  display: block;
+  padding: 2rem 0;
+}
+
+/*  Animations des languettes  */
+.tag-1, .tag-2, .tag-3 {
+  -webkit-animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-4, .tag-5, .tag-6 {
+  -webkit-animation: slide-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-7, .tag-8, .tag-9 {
+  -webkit-animation: slide-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+  animation: slide-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-1 {
+  animation-delay: 0.1s;
+}
+
+.tag-2 {
+  animation-delay: 0.4s;
+}
+
+.tag-3 {
+  animation-delay: 0.7s;
+}
+
+.tag-4 {
+  animation-delay: 0.7s;
+}
+
+.tag-5 {
+  animation-delay: 1s;
+}
+
+.tag-6 {
+  animation-delay: 1.3s;
+}
+
+.tag-7 {
+  animation-delay: 0.1s;
+}
+
+.tag-8 {
+  animation-delay: 0.4s;
+}
+
+.tag-9 {
+  animation-delay: 0.7s;
+}
+
+/*  Reserver  */
+.reserver {
+  background: #F6F6F6;
+  padding-bottom: 5rem;
+}
+
+.reservation {
+  display: block;
+  text-align: center;
+  padding: 0 2rem;
+}
+.reservation h3 {
+  padding: 0 1rem 1rem 1rem;
+  -webkit-animation: slide-right 1.5s 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  animation: slide-right 1.5s 2.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+.reservation h4 {
+  font-weight: 300;
+  padding-bottom: 3rem;
+  -webkit-animation: slide-left 1.5s 2.6s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  animation: slide-left 1.5s 2.6s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+
+section .title {
+  display: inline-flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding-bottom: 1.5rem;
+}
+
+.main-container .fonctionnement {
+  display: flex;
+  justify-content: center;
+}
+
+.fonctionnement .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 100%;
+}
+
+/*  CARD FONCTIONNEMENT (x3 card)  */
+.card {
+  position: relative;
+  flex: 1 1 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  -o-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  background: #F6F6F6;
+  -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.card:hover {
+  box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.3);
+}
+.card p {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -12px;
+  top: 35%;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #9356DC;
+  color: #fff;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.card .fa-solid {
+  color: #7E7E7E;
+  padding-right: 1rem;
+}
+.card .fa-solid__colored {
+  color: #9356DC;
+}
+
+.card:nth-child(1) {
+  -webkit-animation: slide-right 1.5s 3s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  animation: slide-right 1.5s 3s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+
+.card:nth-child(2) {
+  -webkit-animation: slide-bottom 1.5s 3s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  animation: slide-bottom 1.5s 3s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+
+.card:nth-child(3) {
+  -webkit-animation: slide-left 1.5s 3s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  animation: slide-left 1.5s 3s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+
+/*  CARTES MENU (x3 cartes)  */
+.restaurants {
+  background: #F6F6F6;
+  padding: 2.5rem 0;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 6.25rem;
+  row-gap: 3.125rem;
+}
+.content .cartes {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 27rem;
+  position: relative;
+}
+.content .cartes .image {
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.content .cartes .image img {
+  width: 100%;
+  height: 13rem;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  -o-transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
+}
+.content .cartes .image img:hover {
+  -o-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.content .cartes .image span {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  padding: 0.5rem 0.7rem;
+  background: #99E2D0;
+  color: #008766;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  opacity: 1;
+  -webkit-animation: new 1s linear infinite alternate-reverse;
+  animation: new 1s linear infinite alternate-reverse;
+  -o-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+}
+.content .cartes .menu {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.content .cartes .menu__text {
+  text-align: left;
+  padding-left: 1rem;
+  color: black;
+}
+.content .cartes .menu__text h4 {
+  padding-top: 0.5rem;
+}
+.content .cartes .menu__text p {
+  padding-bottom: 1rem;
+}
+.content .cartes .menu__heart {
+  position: relative;
+  padding: 0.5rem;
+  color: black;
+}
+.content .cartes .menu__heart i {
+  position: absolute;
+  top: 0.7rem;
+  right: 1rem;
+  font-size: 1.375rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.content .cartes .menu__heart .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  -o-transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  animation: pulse 2s 0s infinite ease;
+  -webkit-animation: pulse 2s 0s infinite ease;
+}
+.content .cartes .menu__heart .fa-solid:hover {
+  opacity: 1;
+}
+
+.c1 {
+  animation: slide-up 1.5s 3.2s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  -webkit-animation: slide-up 1.5s 3.2s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+
+.c2 {
+  animation: slide-up 1.5s 3.4s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  -webkit-animation: slide-up 1.5s 3.4s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+
+.c3 {
+  animation: slide-up 1.5s 3.6s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  -webkit-animation: slide-up 1.5s 3.6s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+
+.c4 {
+  animation: slide-up 1.5s 3.8s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+  -webkit-animation: slide-up 1.5s 3.8s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+
+/*  Loader  */
+.content-loader {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column wrap;
+  gap: 1.5rem;
+  padding: 21rem 12.5rem;
+  width: 100%;
+  height: 100%;
+  background: #F6F6F6;
+  z-index: 101;
+  opacity: 1;
+  visibility: 1;
+  overflow: hidden;
+  animation: content-loader 2.5s ease both;
+  -webkit-animation: content-loader 2.5s ease both;
+}
+@media screen and (max-width: 992px) {
+  .content-loader {
+    padding: 18rem 3.125rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content-loader {
+    padding: 15rem 1.5625rem;
+  }
+}
+.content-loader__load {
+  position: static;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-family: "Shrikhand", cursive;
+  font-style: italic;
+}
+.content-loader__load h1 {
+  font-size: 3rem;
+  animation: new 1s ease-in-out infinite forwards;
+  -webkit-animation: new 1s ease-in-out infinite forwards;
+}
+.content-loader__load h1 i {
+  color: #FF79DA;
+}
+.content-loader .loading {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-loader .loading__line-box {
+  padding: 2px;
+  width: 50%;
+  height: 20px;
+  border: 2px solid #99E2D0;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.3);
+}
+.content-loader .loading__line-box .line {
+  height: 100%;
+  width: 100%;
+  transform-origin: left;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background: rgb(147, 86, 220);
+  background: linear-gradient(90deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  animation: loading 2s forwards cubic-bezier(0, 0, 0, 0);
+  -webkit-animation: loading 2s forwards cubic-bezier(0, 0, 0, 0);
+}
+
+/*# sourceMappingURL=style.css.map */

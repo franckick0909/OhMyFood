@@ -1,0 +1,51 @@
+
+
+header {
+    @include flex;
+    flex-direction: column;
+    width: 100%;
+    .logo{
+        width: 13rem;
+        padding: 1.2rem 0;
+        -webkit-animation: slide-up 1.5s 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+        animation: slide-up 1.5s 2.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+                &__img{
+            @include img;
+        }
+    }
+}
+
+
+form{
+    width: 100%;
+    margin: 0 auto;
+    .input-group{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input{
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.125rem;
+            width: 100%;
+            border: none;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            outline: none;
+            -webkit-text-fill-color: $bg-footer-grey;
+            background: $bg-grey2;
+            -webkit-animation: fade 1.5s 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+            animation: fade 1.5s 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+        }
+        i{
+            display: inline-flex;
+            justify-content: center;
+            position: absolute;
+            margin-right: 11rem;
+            font-size: 1.25rem;
+            color: $bg-footer-grey;
+            -webkit-animation: fade 1.5s 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+            animation: fade 1.5s 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+        }
+    }
+}

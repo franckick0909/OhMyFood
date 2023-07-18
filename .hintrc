@@ -1,0 +1,58 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "transform",
+          "transition",
+          "object-fit",
+          "flex",
+          "flex-direction",
+          "flex-wrap",
+          "background-clip: text",
+          "scroll-behavior",
+          "animation",
+          "flex-basis",
+          "-webkit-text-fill-color",
+          "grid-template-columns",
+          "grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))",
+          "display: grid",
+          "grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr))",
+          "animation-delay"
+        ]
+      }
+    ],
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "input[type=search]"
+        ]
+      }
+    ],
+    "detect-css-reflows/composite": "off",
+    "no-inline-styles": "off",
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
+    ],
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id-active": "off"
+      }
+    ],
+    "axe/name-role-value": [
+      "default",
+      {
+        "link-name": "off"
+      }
+    ]
+  }
+}

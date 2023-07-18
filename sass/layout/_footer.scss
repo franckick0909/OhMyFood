@@ -1,0 +1,86 @@
+footer{
+    background: $bg-footer-grey;
+    display: inline-block;
+    .footer-content{
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 4rem 3rem 1.5rem 2rem;
+        gap: 1rem;
+        @media screen and (max-width: 600px){
+            flex-direction: column;
+            padding: 1rem 0 2rem 2rem;
+            gap: 0rem;
+        }
+        &__logo{
+            position: absolute;
+            color: $text-color;
+            display: flex;
+            @media screen and (max-width: 600px){
+                position: static;
+            }
+        }
+        &__text-icon {
+            display: flex;
+            flex-direction: row;
+            @media screen and (max-width: 600px){
+                flex-direction: column;
+                padding-top: 1.5rem;
+            }
+            .text{
+                font-size: 1.125rem;
+                font-weight: 500;
+                color: $text-color;
+                padding-bottom: 0.5rem;
+                padding-right: 5px;
+                .fa-utensils{
+                    margin: 0 12px 0;
+                    @media screen and (max-width: 600px){
+                        margin: 0 12px 0 0;
+                    }
+                }
+                .fa-handshake{
+                    margin: 0 12px;
+                    -o-transform: rotate(-25deg);
+                    -webkit-transform: rotate(-25deg);
+                    -moz-transform: rotate(-25deg);
+                    -ms-transform: rotate(-25deg);
+                    transform: rotate(-25deg);
+                    @media screen and (max-width: 600px){
+                        margin: 0 6px 0 0;
+                    }
+                }
+            }
+        }
+        &__mention-mail{
+            display: flex;
+            flex-direction: row;
+            padding: 0 12rem 0 2rem;
+            gap: 1rem;
+            @media screen and (max-width: 600px){
+                flex-direction: column;
+                padding: 0.5rem 8rem 0 0;
+                gap: 0;
+            }
+            .text2{
+                font-size: 1.125rem;
+                font-weight: 400;
+                color: $text-color;
+                padding-bottom: 0.5rem;
+            }
+        }
+
+    }
+}
+
+
+/*  Un footer en relatif et "bottom: -22rem;", pour compenser le "top: 22rem;" de la "balise main"  */
+
+
+.footer-menu{
+    background: $bg-footer-grey;
+    position: relative;
+    bottom: -22rem;
+    display: block;
+}

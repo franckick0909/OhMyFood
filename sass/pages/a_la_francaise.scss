@@ -1,0 +1,223 @@
+
+
+/*  header-menu  */
+
+.header-menu {
+    @include flex;
+    margin: 0 auto;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 3.125rem;
+    overflow: hidden;
+    .logo{
+        width: 13rem;
+        padding: 1.2rem 0;
+        -webkit-animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+        animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+        &__img{
+            @include img;
+        }
+    }
+    .arrow{
+        position: absolute;
+        left: 3.125rem;
+        -webkit-animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) backwards;
+        animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) backwards;
+        & i{
+            font-size: 1.5rem;
+            font-weight: bolder;
+            color: $bg-footer-grey;
+        }
+    }
+}
+
+/*  Image du menu, en position: absolute; */
+
+.img-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 4.9rem;
+    width: 100%;
+    height: 24rem;
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
+
+/*  Conteneur global "main", suivi,
+   
+    du container qui englobe tout ce qu'il y a a l'intérieur.  */
+
+.main{
+    @include flex;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    padding: 0 6.25rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 22rem;
+    @media screen and (max-width: 600px){
+        padding: 0 0rem;
+    }
+    &__container{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background: $bg-grey1;
+        border-top-left-radius: 2.5rem;
+        border-top-right-radius: 2.5rem;
+        @media screen and (max-width: 600px){
+            padding: 0 0.5rem;
+        }
+    }
+}
+
+/*  Menu title avec la Palette du goût, avec le coeur */
+
+.title-menu{
+    @include flex;
+    gap: 2rem;
+    width: 100%;
+    @media screen and (max-width: 600px){
+        display: flex;
+        justify-content: space-between;
+        gap: 0;
+        padding-top: 1rem;
+    }
+    &__heart{                                     /* <--- Le coeur du menu-title  */
+        position: relative;
+        color: black;
+        i{
+            position: absolute;
+            top: -0.7rem;
+            left: 0;
+            font-size: 1.375rem;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+}
+        @media screen and (max-width: 600px){
+            left: -2rem;
+        }
+        .fa-solid{
+            @include heart;
+        }
+    }
+}
+
+/*  Conteneur des 3 box, et des 3 languettes  */
+
+.content-box{
+    background: $bg-grey1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/*  Conteneur  des 3 languettes  */
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    width: 100%;
+    & .tag-container{
+        display: flex;
+        width: 100%;
+        text-align: left;
+        justify-content: space-between;
+        -o-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        border-radius: 15px;
+        gap: .3125rem;
+        overflow: hidden;
+        cursor: pointer;
+        background: #fff;
+        @include shadow;
+        &__tag{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 15px;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            & h4, p{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+        &__price{
+            position: relative;
+            display: block;
+            padding-top: 2.2rem;
+        }
+    }
+}
+
+/* Bouton en dégradé en dessous de "content-box"  */
+
+.btn-menu{
+    display: block;
+    padding: 2rem 0;
+}
+
+
+/*  Animations des languettes  */
+
+.tag-1, .tag-2, .tag-3{
+    -webkit-animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+    animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+.tag-4, .tag-5, .tag-6{
+    -webkit-animation: slide-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+    animation: slide-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+.tag-7, .tag-8, .tag-9{
+    -webkit-animation: slide-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+    animation: slide-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-1{
+    animation-delay: 0.1s;
+}
+.tag-2{
+    animation-delay: 0.4s;
+}
+.tag-3{
+    animation-delay: 0.7s;
+}
+.tag-4{
+    animation-delay: 0.7s;
+}
+.tag-5{
+    animation-delay: 1s;
+}
+.tag-6{
+    animation-delay: 1.3s;
+}
+.tag-7{
+    animation-delay: 0.1s;
+}
+.tag-8{
+    animation-delay: 0.4s;
+}
+.tag-9{
+    animation-delay: 0.7s;
+}
