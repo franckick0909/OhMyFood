@@ -430,32 +430,6 @@ form .input-group i {
   animation: fade 1.5s 3.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
 }
 
-/*
-.nav {
-    padding-right: $layout-margin;
-    flex: 2 1 auto;
-    text-align: right;
-    &__link {
-        display: inline;
-        font-size: 3rem;
-        padding-left: 1.5rem;
-        & a{
-        text-decoration: none;
-        color: $colour-accent;
-        }
-        &--active {
-            color: $colour-secondary;
-            &:hover{
-                cursor:default;
-                color: $colour-secondary;
-            }
-        }
-        & a:hover{
-            color: $colour-white;
-        }
-    }
-}
-*/
 footer {
   background: #353535;
   display: inline-block;
@@ -551,53 +525,6 @@ footer .footer-content__mention-mail .text2 {
   display: block;
 }
 
-/*
-.form {
-    width: 100%;
-    padding-bottom: $grid-gutter;
-    &__heading {
-        width: 100%;
-        color: $colour-white;
-        @include heading-shadow;
-        background: $colour-primary;
-        line-height: 5rem;
-        padding: $grid-gutter;
-    }
-    &__field {
-        & label {
-            color: $colour-accent;
-            display: block;
-            font-size: 2rem;
-            line-height: 2rem;
-            padding-top: $grid-gutter;
-        }
-        & input {
-            width: 100%;
-            background: $colour-secondary;
-            @include border;
-            padding: $grid-gutter;
-            color: $colour-accent;
-            font-weight: 900;
-            font-style: italic;
-            font-size: 2.75rem;
-            @include border;
-            background-color: $colour-secondary;
-            color: $colour-primary;
-
-        }
-        & textarea {
-            width: 100%;
-            color: $colour-primary;
-            background: $colour-secondary;
-            @include border;
-            outline: none;
-            padding: $grid-gutter;
-            margin-bottom: $grid-gutter*0.5;
-        }
-    }
-}
-
-*/
 /*  header-menu  */
 .header-menu {
   display: flex;
@@ -616,6 +543,11 @@ footer .footer-content__mention-mail .text2 {
   -webkit-animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
   animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
 }
+@media screen and (max-width: 600px) {
+  .header-menu .logo {
+    width: 10rem;
+  }
+}
 .header-menu .logo__img {
   object-fit: cover;
   width: 100%;
@@ -626,6 +558,11 @@ footer .footer-content__mention-mail .text2 {
   left: 3.125rem;
   -webkit-animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
   animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+@media screen and (max-width: 600px) {
+  .header-menu .arrow {
+    left: 1rem;
+  }
 }
 .header-menu .arrow i {
   font-size: 1.5rem;
@@ -693,13 +630,14 @@ footer .footer-content__mention-mail .text2 {
   align-items: center;
   gap: 2rem;
   width: 100%;
+  padding-bottom: 3rem;
 }
 @media screen and (max-width: 600px) {
   .title-menu {
     display: flex;
     justify-content: space-between;
     gap: 0;
-    padding-top: 1rem;
+    padding: 2rem 0.8rem 2rem 0.5rem;
   }
 }
 .title-menu__heart { /* <--- Le coeur du menu-title  */
@@ -747,13 +685,28 @@ footer .footer-content__mention-mail .text2 {
 
 /*  Conteneur des 3 box, et des 3 languettes  */
 .content-box {
-  background: #F6F6F6;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
-  padding: 1rem;
+  padding: 0 12.5rem;
+  background: #F6F6F6;
+}
+@media screen and (max-width: 992px) {
+  .content-box {
+    padding: 0 3.125rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content-box {
+    grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
+  }
 }
 
+/*
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+*/
 /*  Conteneur  des 3 languettes  */
 .box {
   display: flex;
@@ -795,7 +748,7 @@ footer .footer-content__mention-mail .text2 {
 .box .tag-container__price {
   position: relative;
   display: block;
-  padding-top: 2.2rem;
+  padding: 2.2rem 0.8rem 0 0;
 }
 
 /* Bouton en dégradé en dessous de "content-box"  */
@@ -874,6 +827,11 @@ footer .footer-content__mention-mail .text2 {
   -webkit-animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
   animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
 }
+@media screen and (max-width: 600px) {
+  .header-menu .logo {
+    width: 10rem;
+  }
+}
 .header-menu .logo__img {
   object-fit: cover;
   width: 100%;
@@ -884,6 +842,11 @@ footer .footer-content__mention-mail .text2 {
   left: 3.125rem;
   -webkit-animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
   animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+@media screen and (max-width: 600px) {
+  .header-menu .arrow {
+    left: 1rem;
+  }
 }
 .header-menu .arrow i {
   font-size: 1.5rem;
@@ -953,13 +916,14 @@ footer .footer-content__mention-mail .text2 {
   align-items: center;
   gap: 2rem;
   width: 100%;
+  padding-bottom: 3rem;
 }
 @media screen and (max-width: 600px) {
   .title-menu {
     display: flex;
     justify-content: space-between;
     gap: 0;
-    padding-top: 1rem;
+    padding: 2rem 0.8rem 2rem 0.5rem;
   }
 }
 .title-menu__heart { /* <--- Le coeur du menu-title  */
@@ -1007,13 +971,28 @@ footer .footer-content__mention-mail .text2 {
 
 /*  Conteneur des 3 box, et des 3 languettes  */
 .content-box {
-  background: #F6F6F6;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
-  padding: 1rem;
+  padding: 0 12.5rem;
+  background: #F6F6F6;
+}
+@media screen and (max-width: 992px) {
+  .content-box {
+    padding: 0 3.125rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content-box {
+    grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
+  }
 }
 
+/*
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+*/
 /*  Conteneur  des 3 languettes  */
 .box {
   display: flex;
@@ -1055,31 +1034,27 @@ footer .footer-content__mention-mail .text2 {
 .box .tag-container__price {
   position: relative;
   display: block;
-  padding-top: 2.2rem;
+  padding: 2.2rem 0.8rem 0 0;
 }
 
-.box-1 {
-  position: relative; /*  <--  Repositionnement de la box-1, à cause de la 4ème languettes*/
-  top: 2.875rem;
+/*
+.box-1{
+    position: relative;       /*  <--  Repositionnement de la box-1, à cause de la 4ème languettes
+    top: 2.875rem;
+    @media screen and (max-width: 1255px){
+        position: static;
+    }
 }
-@media screen and (max-width: 1255px) {
-  .box-1 {
-    position: static;
-  }
+.box-2{
+    @media screen and (max-width: 1255px){
+        position: relative;
+        bottom: 2.875rem;
+    }
+    @media screen and (max-width: 903px){
+        position: static;
+    }
 }
-
-@media screen and (max-width: 1255px) {
-  .box-2 {
-    position: relative;
-    bottom: 2.875rem;
-  }
-}
-@media screen and (max-width: 903px) {
-  .box-2 {
-    position: static;
-  }
-}
-
+*/
 /* Bouton en dégradé en dessous de "content-box"  */
 .btn-menu {
   display: block;
@@ -1160,6 +1135,11 @@ footer .footer-content__mention-mail .text2 {
   -webkit-animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
   animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
 }
+@media screen and (max-width: 600px) {
+  .header-menu .logo {
+    width: 10rem;
+  }
+}
 .header-menu .logo__img {
   object-fit: cover;
   width: 100%;
@@ -1170,6 +1150,11 @@ footer .footer-content__mention-mail .text2 {
   left: 3.125rem;
   -webkit-animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
   animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+@media screen and (max-width: 600px) {
+  .header-menu .arrow {
+    left: 1rem;
+  }
 }
 .header-menu .arrow i {
   font-size: 1.5rem;
@@ -1237,13 +1222,14 @@ footer .footer-content__mention-mail .text2 {
   align-items: center;
   gap: 2rem;
   width: 100%;
+  padding-bottom: 3rem;
 }
 @media screen and (max-width: 600px) {
   .title-menu {
     display: flex;
     justify-content: space-between;
     gap: 0;
-    padding-top: 1rem;
+    padding: 2rem 0.8rem 2rem 0.5rem;
   }
 }
 .title-menu__heart { /* <--- Le coeur du menu-title  */
@@ -1291,13 +1277,28 @@ footer .footer-content__mention-mail .text2 {
 
 /*  Conteneur des 3 box, et des 3 languettes  */
 .content-box {
-  background: #F6F6F6;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: 1fr;
   gap: 2rem;
-  padding: 1rem;
+  padding: 0 12.5rem;
+  background: #F6F6F6;
+}
+@media screen and (max-width: 992px) {
+  .content-box {
+    padding: 0 3.125rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content-box {
+    grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
+  }
 }
 
+/*
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+*/
 /*  Conteneur  des 3 languettes  */
 .box {
   display: flex;
@@ -1339,7 +1340,7 @@ footer .footer-content__mention-mail .text2 {
 .box .tag-container__price {
   position: relative;
   display: block;
-  padding-top: 2.2rem;
+  padding: 2.2rem 0.8rem 0 0;
 }
 
 /* Bouton en dégradé en dessous de "content-box"  */
@@ -1418,6 +1419,11 @@ footer .footer-content__mention-mail .text2 {
   -webkit-animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
   animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
 }
+@media screen and (max-width: 600px) {
+  .header-menu .logo {
+    width: 10rem;
+  }
+}
 .header-menu .logo__img {
   object-fit: cover;
   width: 100%;
@@ -1428,6 +1434,11 @@ footer .footer-content__mention-mail .text2 {
   left: 3.125rem;
   -webkit-animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
   animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+@media screen and (max-width: 600px) {
+  .header-menu .arrow {
+    left: 1rem;
+  }
 }
 .header-menu .arrow i {
   font-size: 1.5rem;
@@ -1495,13 +1506,14 @@ footer .footer-content__mention-mail .text2 {
   align-items: center;
   gap: 2rem;
   width: 100%;
+  padding-bottom: 3rem;
 }
 @media screen and (max-width: 600px) {
   .title-menu {
     display: flex;
     justify-content: space-between;
     gap: 0;
-    padding-top: 1rem;
+    padding: 2rem 0.8rem 2rem 0.5rem;
   }
 }
 .title-menu__heart { /* <--- Le coeur du menu-title  */
@@ -1549,13 +1561,30 @@ footer .footer-content__mention-mail .text2 {
 
 /*  Conteneur des 3 box, et des 3 languettes  */
 .content-box {
-  background: #F6F6F6;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   gap: 2rem;
-  padding: 1rem;
+  padding: 0 12.5rem;
+  background: #F6F6F6;
+}
+@media screen and (max-width: 992px) {
+  .content-box {
+    grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
+    padding: 0 3.125rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content-box {
+    grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
+  }
 }
 
+/*
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+*/
 /*  Conteneur  des 3 languettes  */
 .box {
   display: flex;
@@ -1597,7 +1626,7 @@ footer .footer-content__mention-mail .text2 {
 .box .tag-container__price {
   position: relative;
   display: block;
-  padding-top: 2.2rem;
+  padding: 2.2rem 0.8rem 0 0;
 }
 
 /* Bouton en dégradé en dessous de "content-box"  */
