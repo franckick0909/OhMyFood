@@ -262,7 +262,7 @@ section .title{
     background: $bg-grey1;
     z-index: 101;
     opacity: 1;
-    visibility: 1;
+    visibility: visible;
     overflow: hidden;
     animation: content-loader 2.5s ease both;
     -webkit-animation: content-loader 2.5s ease both;
