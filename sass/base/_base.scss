@@ -37,7 +37,7 @@ body {
         }
 }
 
-section{                               /* <--- Section de la page d'acceuil  */
+section, .section{                               /* <--- Section de la page d'acceuil  */
     @include flex;
     padding: 2.5rem 0;
     flex-wrap: wrap;

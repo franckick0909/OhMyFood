@@ -41,7 +41,7 @@ body {
   }
 }
 
-section { /* <--- Section de la page d'acceuil  */
+section, .section { /* <--- Section de la page d'acceuil  */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -138,6 +138,13 @@ body {
 }
 
 h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 1.75rem;
+  font-style: italic;
+}
+
+.titre-des-menus {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: 1.75rem;

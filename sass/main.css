@@ -41,7 +41,7 @@ body {
   }
 }
 
-section { /* <--- Section de la page d'acceuil  */
+section, .section { /* <--- Section de la page d'acceuil  */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -122,6 +122,13 @@ body {
 }
 
 h1 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 1.75rem;
+  font-style: italic;
+}
+
+.titre-des-menus {
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   font-size: 1.75rem;
@@ -578,7 +585,7 @@ footer .footer-content__mention-mail .text2 {
     display: flex;
     justify-content: space-between;
     gap: 0;
-    padding-top: 1rem;
+    padding: 2rem 0.8rem 2rem 0.5rem;
   }
 }
 .title-menu__heart { /* <--- Le coeur du menu-title  */
@@ -677,7 +684,7 @@ footer .footer-content__mention-mail .text2 {
 .box .tag-container__price {
   position: relative;
   display: block;
-  padding-top: 2.2rem;
+  padding: 2.2rem 0.8rem 0 0;
 }
 
 /* Bouton en dégradé en dessous de "content-box"  */
@@ -849,7 +856,7 @@ footer .footer-content__mention-mail .text2 {
     display: flex;
     justify-content: space-between;
     gap: 0;
-    padding-top: 1rem;
+    padding: 2rem 0.8rem 2rem 0.5rem;
   }
 }
 .title-menu__heart { /* <--- Le coeur du menu-title  */
@@ -948,7 +955,7 @@ footer .footer-content__mention-mail .text2 {
 .box .tag-container__price {
   position: relative;
   display: block;
-  padding-top: 2.2rem;
+  padding: 2.2rem 0.8rem 0 0;
 }
 
 /*
@@ -1140,7 +1147,7 @@ footer .footer-content__mention-mail .text2 {
     display: flex;
     justify-content: space-between;
     gap: 0;
-    padding-top: 1rem;
+    padding: 2rem 0.8rem 2rem 0.5rem;
   }
 }
 .title-menu__heart { /* <--- Le coeur du menu-title  */
@@ -1239,7 +1246,7 @@ footer .footer-content__mention-mail .text2 {
 .box .tag-container__price {
   position: relative;
   display: block;
-  padding-top: 2.2rem;
+  padding: 2.2rem 0.8rem 0 0;
 }
 
 /* Bouton en dégradé en dessous de "content-box"  */
@@ -1409,7 +1416,7 @@ footer .footer-content__mention-mail .text2 {
     display: flex;
     justify-content: space-between;
     gap: 0;
-    padding-top: 1rem;
+    padding: 2rem 0.8rem 2rem 0.5rem;
   }
 }
 .title-menu__heart { /* <--- Le coeur du menu-title  */
@@ -1451,12 +1458,14 @@ footer .footer-content__mention-mail .text2 {
 .content-box {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   gap: 2rem;
   padding: 0 12.5rem;
   background: #F6F6F6;
 }
 @media screen and (max-width: 992px) {
   .content-box {
+    grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
     padding: 0 3.125rem;
   }
 }
@@ -1508,7 +1517,7 @@ footer .footer-content__mention-mail .text2 {
 .box .tag-container__price {
   position: relative;
   display: block;
-  padding-top: 2.2rem;
+  padding: 2.2rem 0.8rem 0 0;
 }
 
 /* Bouton en dégradé en dessous de "content-box"  */
