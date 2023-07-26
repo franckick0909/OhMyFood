@@ -48,7 +48,7 @@ section, .section{                               /* <--- Section de la page d'ac
 .box-title{                            /* <--- Disposition des titres, entrées, plats, desserts  */
     display: flex;
     text-transform: uppercase;
-    padding-bottom: 1.125rem;
+    padding-bottom: .75rem;
     & h2{
         position: relative;
         font-size: 1rem;

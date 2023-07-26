@@ -8,15 +8,16 @@
     flex-direction: row;
     width: 100%;
     max-width: 1440px;
-    padding: 0 3.125rem;
     overflow: hidden;
-    .logo{
+    .logos{
+        display: block;
         width: 13rem;
-        padding: 1.2rem 0;
+        padding: 30px 0 32px 0;
         -webkit-animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
         animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
         @media screen and (max-width: 600px){
             width: 10rem;
+            padding: 20px 0 13px 0;
         }
         &__img{
             @include img;
@@ -28,7 +29,7 @@
         -webkit-animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) backwards;
         animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) backwards;
         @media screen and (max-width: 600px){
-            left: 1rem;
+            left: 17px;
         }
         & i{
             font-size: 1.5rem;
@@ -48,6 +49,11 @@
     top: 4.9rem;
     width: 100%;
     height: 24rem;
+    @media screen and (max-width: 600px){
+        top: 4.2rem;
+        width: 100%;
+        height: 17rem;
+    }
     & img{
         width: 100%;
         height: 100%;
@@ -70,21 +76,20 @@
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    top: 22rem;
+    top: 20rem;
     @media screen and (max-width: 600px){
         padding: 0 0rem;
+        top: 218px;
     }
     &__container{
-        position: relative;
         display: flex;
         justify-content: center;
         width: 100%;
-        height: 100%;
         background: $bg-grey1;
         border-top-left-radius: 2.5rem;
         border-top-right-radius: 2.5rem;
         @media screen and (max-width: 600px){
-            padding: 0 0.5rem;
+            padding: 0 0px;
         }
     }
 }
@@ -95,12 +100,12 @@
     @include flex;
     gap: 2rem;
     width: 100%;
-    padding-bottom: 3rem;
+    padding-bottom: 40px;
     @media screen and (max-width: 600px){
         display: flex;
         justify-content: space-between;
         gap: 0;
-        padding: 2rem 0.8rem 2rem 0.5rem;
+        padding: 2rem 12px 2rem 12px;
     }
     &__heart{                                     /* <--- Le coeur du menu-title  */
         position: relative;
@@ -115,9 +120,9 @@
             -moz-border-radius: 50%;
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
-        }
+}
         @media screen and (max-width: 600px){
-            left: -2rem;
+            left: -5rem;
         }
         .fa-solid{
             @include heart;
@@ -130,14 +135,17 @@
 .content-box{
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
     gap: 2rem;
     padding: 0 12.5rem;
     background: $bg-grey1;
     @media screen and (max-width: 992px){
+        grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
         padding: 0 3.125rem;
     }
     @media screen and (max-width: 600px){
         grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
+        padding: 0 12px;
     }
 }
 /*
@@ -147,7 +155,6 @@
 */
 
 /*  Conteneur  des 3 languettes  */
-
 
 .box{
     display: flex;
@@ -192,25 +199,6 @@
     }
 }
 
-/*
-.box-1{
-    position: relative;       /*  <--  Repositionnement de la box-1, à cause de la 4ème languettes
-    top: 2.875rem;
-    @media screen and (max-width: 1255px){
-        position: static;
-    }
-}
-.box-2{
-    @media screen and (max-width: 1255px){
-        position: relative;
-        bottom: 2.875rem;
-    }
-    @media screen and (max-width: 903px){
-        position: static;
-    }
-}
-*/
-
 /* Bouton en dégradé en dessous de "content-box"  */
 
 .btn-menu{
@@ -219,10 +207,9 @@
 }
 
 
-
 /*  Animations des languettes  */
 
-.tag-1, .tag-2, .tag-3, .tag-44{
+.tag-1, .tag-2, .tag-3{
     -webkit-animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
     animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
 }
@@ -244,17 +231,14 @@
 .tag-3{
     animation-delay: 0.7s;
 }
-.tag-44{
-    animation-delay: 1s;
-}
 .tag-4{
-    animation-delay: 1s;
+    animation-delay: 0.7s;
 }
 .tag-5{
-    animation-delay: 1.3s;
+    animation-delay: 1s;
 }
 .tag-6{
-    animation-delay: 1.6s;
+    animation-delay: 1.3s;
 }
 .tag-7{
     animation-delay: 0.1s;

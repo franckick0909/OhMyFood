@@ -1,6 +1,6 @@
 footer{
     background: $bg-footer-grey;
-    display: inline-block;
+    display: block;
     .footer-content{
         position: relative;
         display: flex;
@@ -10,8 +10,8 @@ footer{
         gap: 1rem;
         @media screen and (max-width: 600px){
             flex-direction: column;
-            padding: 1rem 0 2rem 2rem;
-            gap: 0rem;
+            padding: 22px 25px;
+            gap: 0px;
         }
         &__logo{
             position: absolute;
@@ -26,7 +26,7 @@ footer{
             flex-direction: row;
             @media screen and (max-width: 600px){
                 flex-direction: column;
-                padding-top: 1.5rem;
+                padding-top: 1rem;
             }
             .text{
                 font-size: 1.125rem;
@@ -34,6 +34,11 @@ footer{
                 color: $text-color;
                 padding-bottom: 0.5rem;
                 padding-right: 5px;
+                @media screen and (max-width: 600px){
+                    font-size: 1rem;
+                    padding-bottom: .4375rem;
+                    padding-right: 0px;
+                }
                 .fa-utensils{
                     margin: 0 12px 0;
                     @media screen and (max-width: 600px){
@@ -60,7 +65,7 @@ footer{
             gap: 1rem;
             @media screen and (max-width: 600px){
                 flex-direction: column;
-                padding: 0.5rem 8rem 0 0;
+                padding: 0px;
                 gap: 0;
             }
             .text2{
@@ -68,6 +73,10 @@ footer{
                 font-weight: 400;
                 color: $text-color;
                 padding-bottom: 0.5rem;
+                @media screen and (max-width: 600px){
+                    font-size: 1rem;
+                    padding-bottom: .4375rem;
+                }
             }
         }
 
@@ -81,6 +90,9 @@ footer{
 .footer-menu{
     background: $bg-footer-grey;
     position: relative;
-    bottom: -22rem;
+    bottom: -20rem;
     display: block;
+    @media screen and (max-width: 600px){
+        bottom: -13.5rem;
+    }
 }

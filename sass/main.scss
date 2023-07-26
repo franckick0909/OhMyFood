@@ -19,7 +19,7 @@
 
 .reserver{
     background: $bg-grey1;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
 }
 .reservation{
     display: block;
@@ -33,7 +33,7 @@
     }
     & h4{
         font-weight: 300;
-        padding-bottom: 3rem;
+        padding-bottom: 1.5rem;
         -webkit-animation: slide-left 1.5s 2.6s cubic-bezier(0.215, 0.610, 0.355, 1) backwards;
         animation: slide-left 1.5s 2.6s cubic-bezier(0.215, 0.610, 0.355, 1) backwards;
     }
@@ -50,13 +50,14 @@ section .title{
 .main-container .fonctionnement{
     display: flex;
     justify-content: center;
+    padding-bottom: 4rem;
 }
 
 .fonctionnement .content{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 2rem;
     width: 100%;
 }
 
@@ -135,6 +136,9 @@ section .title{
     flex-wrap: wrap;
     column-gap: 6.25rem;
     row-gap: 3.125rem;
+    @media screen and (max-width: 600px){
+        row-gap: 1.125rem;
+    }
     .cartes{
     display: flex;
     flex-direction: column;
@@ -281,6 +285,9 @@ section .title{
             font-size: 3rem;
             animation: new 1s ease-in-out infinite forwards;
             -webkit-animation: new 1s ease-in-out infinite forwards;
+            @media screen and (max-width: 600px){
+                font-size: 2rem;
+            }
             & i{
                 color: $primary-color;
             }

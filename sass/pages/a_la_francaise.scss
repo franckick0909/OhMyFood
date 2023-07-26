@@ -8,15 +8,16 @@
     flex-direction: row;
     width: 100%;
     max-width: 1440px;
-    padding: 0 3.125rem;
     overflow: hidden;
-    .logo{
+    .logos{
+        display: block;
         width: 13rem;
-        padding: 1.2rem 0;
+        padding: 30px 0 32px 0;
         -webkit-animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
         animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
         @media screen and (max-width: 600px){
             width: 10rem;
+            padding: 20px 0 13px 0;
         }
         &__img{
             @include img;
@@ -28,7 +29,7 @@
         -webkit-animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) backwards;
         animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.610, 0.355, 1) backwards;
         @media screen and (max-width: 600px){
-            left: 1rem;
+            left: 17px;
         }
         & i{
             font-size: 1.5rem;
@@ -48,6 +49,11 @@
     top: 4.9rem;
     width: 100%;
     height: 24rem;
+    @media screen and (max-width: 600px){
+        top: 4.2rem;
+        width: 100%;
+        height: 17rem;
+    }
     & img{
         width: 100%;
         height: 100%;
@@ -70,9 +76,10 @@
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    top: 22rem;
+    top: 20rem;
     @media screen and (max-width: 600px){
         padding: 0 0rem;
+        top: 218px;
     }
     &__container{
         display: flex;
@@ -82,7 +89,7 @@
         border-top-left-radius: 2.5rem;
         border-top-right-radius: 2.5rem;
         @media screen and (max-width: 600px){
-            padding: 0 0.5rem;
+            padding: 0 0px;
         }
     }
 }
@@ -93,12 +100,12 @@
     @include flex;
     gap: 2rem;
     width: 100%;
-    padding-bottom: 3rem;
+    padding-bottom: 40px;
     @media screen and (max-width: 600px){
         display: flex;
         justify-content: space-between;
         gap: 0;
-        padding: 2rem 0.8rem 2rem 0.5rem;
+        padding: 2rem 12px 2rem 12px;
     }
     &__heart{                                     /* <--- Le coeur du menu-title  */
         position: relative;
@@ -115,7 +122,7 @@
             -o-border-radius: 50%;
 }
         @media screen and (max-width: 600px){
-            left: -2rem;
+            left: -5rem;
         }
         .fa-solid{
             @include heart;
@@ -138,6 +145,7 @@
     }
     @media screen and (max-width: 600px){
         grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
+        padding: 0 12px;
     }
 }
 /*
