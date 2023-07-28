@@ -66,33 +66,34 @@
    
     du container qui englobe tout ce qu'il y a a l'intérieur.  */
 
-.main{
-    @include flex;
-    flex-wrap: wrap;
-    max-width: 1440px;
-    width: 100%;
-    height: 100%;
-    padding: 0 6.25rem;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    top: 20rem;
-    @media screen and (max-width: 600px){
-        padding: 0 0rem;
-        top: 218px;
-    }
-    &__container{
-        display: flex;
-        justify-content: center;
+    .main{
+        @include flex;
+        flex-wrap: wrap;
+        max-width: 1440px;
         width: 100%;
-        background: $bg-grey1;
-        border-top-left-radius: 2.5rem;
-        border-top-right-radius: 2.5rem;
+        height: 100%;
+        padding: 0 6.25rem;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        top: 21.5rem;
         @media screen and (max-width: 600px){
-            padding: 0 0px;
+            padding: 0 0rem;
+            top: 15.125rem;
+        }
+        &__container{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background: $bg-grey1;
+            border-top-left-radius: 2.5rem;
+            border-top-right-radius: 2.5rem;
+            gap: 40px;
+            @media screen and (max-width: 600px){
+                padding: 0 0px;
+            }
         }
     }
-}
 
 /*  Menu title avec la Palette du goût, avec le coeur */
 
@@ -100,12 +101,11 @@
     @include flex;
     gap: 2rem;
     width: 100%;
-    padding-bottom: 40px;
     @media screen and (max-width: 600px){
         display: flex;
         justify-content: space-between;
         gap: 0;
-        padding: 2rem 12px 2rem 12px;
+        padding: 32px 0px 0 12px;
     }
     &__heart{                                     /* <--- Le coeur du menu-title  */
         position: relative;
@@ -203,7 +203,13 @@
 
 .btn-menu{
     display: block;
-    padding: 2rem 0;
+    padding: 0;
+    @media screen and (max-width: 600px){
+        padding-bottom: 40px;
+    }
+    & .menu{
+        padding: 16px 48px;
+    }
 }
 
 
