@@ -586,293 +586,12 @@ footer .footer-content__mention-mail .text2 {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  top: 20rem;
+  top: 21.5rem;
 }
 @media screen and (max-width: 600px) {
   .main {
     padding: 0 0rem;
-    top: 218px;
-  }
-}
-.main__container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background: #F6F6F6;
-  border-top-left-radius: 2.5rem;
-  border-top-right-radius: 2.5rem;
-  gap: 40px;
-}
-@media screen and (max-width: 600px) {
-  .main__container {
-    padding: 0 0px;
-  }
-}
-
-/*  Menu title avec la Palette du goût, avec le coeur */
-.title-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
-}
-@media screen and (max-width: 600px) {
-  .title-menu {
-    display: flex;
-    justify-content: space-between;
-    gap: 0;
-    padding: 32px 0px 0 12px;
-  }
-}
-.title-menu__heart { /* <--- Le coeur du menu-title  */
-  position: relative;
-  color: black;
-}
-.title-menu__heart i {
-  position: absolute;
-  top: -0.7rem;
-  right: 0;
-  font-size: 1.375rem;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-@media screen and (max-width: 600px) {
-  .title-menu__heart {
-    right: 2rem;
-  }
-}
-.title-menu__heart .fa-solid {
-  color: transparent;
-  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  background-clip: text;
-  opacity: 0;
-  transform: scale(1);
-  transition: all 0.3s ease-out;
-  animation: pulse 2s 0s infinite ease;
-  -webkit-animation: pulse 2s 0s infinite ease;
-}
-.title-menu__heart .fa-solid:hover {
-  opacity: 1;
-}
-
-/*  Conteneur des 3 box, et des 3 languettes  */
-.content-box {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-  gap: 2rem;
-  padding: 0 12.5rem;
-  background: #F6F6F6;
-}
-@media screen and (max-width: 992px) {
-  .content-box {
-    grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
-    padding: 0 3.125rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  .content-box {
-    grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
-    padding: 0 12px;
-  }
-}
-
-/*
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-
-*/
-/*  Conteneur  des 3 languettes  */
-.box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  width: 100%;
-}
-.box .tag-container {
-  display: flex;
-  width: 100%;
-  text-align: left;
-  justify-content: space-between;
-  border-radius: 15px;
-  gap: 0.3125rem;
-  overflow: hidden;
-  cursor: pointer;
-  background: #fff;
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-}
-.box .tag-container__tag {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 15px;
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.box .tag-container__tag h4, .box .tag-container__tag p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.box .tag-container__price {
-  position: relative;
-  display: block;
-  padding: 2.2rem 0.8rem 0 0;
-}
-
-/* Bouton en dégradé en dessous de "content-box"  */
-.btn-menu {
-  display: block;
-  padding: 2rem 0;
-}
-
-/*  Animations des languettes  */
-.tag-1, .tag-2, .tag-3 {
-  animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
-}
-
-.tag-4, .tag-5, .tag-6 {
-  animation: slide-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
-}
-
-.tag-7, .tag-8, .tag-9 {
-  animation: slide-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
-}
-
-.tag-1 {
-  animation-delay: 0.1s;
-}
-
-.tag-2 {
-  animation-delay: 0.4s;
-}
-
-.tag-3 {
-  animation-delay: 0.7s;
-}
-
-.tag-4 {
-  animation-delay: 0.7s;
-}
-
-.tag-5 {
-  animation-delay: 1s;
-}
-
-.tag-6 {
-  animation-delay: 1.3s;
-}
-
-.tag-7 {
-  animation-delay: 0.1s;
-}
-
-.tag-8 {
-  animation-delay: 0.4s;
-}
-
-.tag-9 {
-  animation-delay: 0.7s;
-}
-
-/*  header-menu  */
-.header-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  flex-direction: row;
-  width: 100%;
-  max-width: 1440px;
-  overflow: hidden;
-}
-.header-menu .logos {
-  display: block;
-  width: 13rem;
-  padding: 30px 0 32px 0;
-  animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
-}
-@media screen and (max-width: 600px) {
-  .header-menu .logos {
-    width: 10rem;
-    padding: 20px 0 13px 0;
-  }
-}
-.header-menu .logos__img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.header-menu .arrow {
-  position: absolute;
-  left: 3.125rem;
-  animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
-}
-@media screen and (max-width: 600px) {
-  .header-menu .arrow {
-    left: 17px;
-  }
-}
-.header-menu .arrow i {
-  font-size: 1.5rem;
-  font-weight: bolder;
-  color: #353535;
-}
-
-/*  Image du menu, en position: absolute; */
-.img-menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 4.9rem;
-  width: 100%;
-  height: 24rem;
-}
-@media screen and (max-width: 600px) {
-  .img-menu {
-    top: 4.2rem;
-    width: 100%;
-    height: 17rem;
-  }
-}
-.img-menu img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: -1;
-}
-
-/*  Conteneur global "main", suivi,
-
-    du container qui englobe tout ce qu'il y a a l'intérieur.  */
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1440px;
-  width: 100%;
-  height: 100%;
-  padding: 0 6.25rem;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-  top: 20rem;
-}
-@media screen and (max-width: 600px) {
-  .main {
-    padding: 0 0rem;
-    top: 218px;
+    top: 15.125rem;
   }
 }
 .main__container {
@@ -1013,6 +732,11 @@ footer .footer-content__mention-mail .text2 {
   display: block;
   padding: 0;
 }
+@media screen and (max-width: 600px) {
+  .btn-menu {
+    padding-bottom: 40px;
+  }
+}
 .btn-menu .menu {
   padding: 16px 48px;
 }
@@ -1151,12 +875,12 @@ footer .footer-content__mention-mail .text2 {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  top: 20rem;
+  top: 21.5rem;
 }
 @media screen and (max-width: 600px) {
   .main {
     padding: 0 0rem;
-    top: 218px;
+    top: 15.125rem;
   }
 }
 .main__container {
@@ -1295,7 +1019,304 @@ footer .footer-content__mention-mail .text2 {
 /* Bouton en dégradé en dessous de "content-box"  */
 .btn-menu {
   display: block;
-  padding: 2rem 0;
+  padding: 0;
+}
+@media screen and (max-width: 600px) {
+  .btn-menu {
+    padding-bottom: 40px;
+  }
+}
+.btn-menu .menu {
+  padding: 16px 48px;
+}
+
+/*  Animations des languettes  */
+.tag-1, .tag-2, .tag-3 {
+  animation: slide-right 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-4, .tag-5, .tag-6 {
+  animation: slide-bottom 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-7, .tag-8, .tag-9 {
+  animation: slide-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+
+.tag-1 {
+  animation-delay: 0.1s;
+}
+
+.tag-2 {
+  animation-delay: 0.4s;
+}
+
+.tag-3 {
+  animation-delay: 0.7s;
+}
+
+.tag-4 {
+  animation-delay: 0.7s;
+}
+
+.tag-5 {
+  animation-delay: 1s;
+}
+
+.tag-6 {
+  animation-delay: 1.3s;
+}
+
+.tag-7 {
+  animation-delay: 0.1s;
+}
+
+.tag-8 {
+  animation-delay: 0.4s;
+}
+
+.tag-9 {
+  animation-delay: 0.7s;
+}
+
+/*  header-menu  */
+.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1440px;
+  overflow: hidden;
+}
+.header-menu .logos {
+  display: block;
+  width: 13rem;
+  padding: 30px 0 32px 0;
+  animation: slide-up 1.5s 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) backwards;
+}
+@media screen and (max-width: 600px) {
+  .header-menu .logos {
+    width: 10rem;
+    padding: 20px 0 13px 0;
+  }
+}
+.header-menu .logos__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.header-menu .arrow {
+  position: absolute;
+  left: 3.125rem;
+  animation: slide-right 1.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) backwards;
+}
+@media screen and (max-width: 600px) {
+  .header-menu .arrow {
+    left: 17px;
+  }
+}
+.header-menu .arrow i {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #353535;
+}
+
+/*  Image du menu, en position: absolute; */
+.img-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 4.9rem;
+  width: 100%;
+  height: 24rem;
+}
+@media screen and (max-width: 600px) {
+  .img-menu {
+    top: 4.2rem;
+    width: 100%;
+    height: 17rem;
+  }
+}
+.img-menu img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+/*  Conteneur global "main", suivi,
+
+    du container qui englobe tout ce qu'il y a a l'intérieur.  */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  padding: 0 6.25rem;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: 21.5rem;
+}
+@media screen and (max-width: 600px) {
+  .main {
+    padding: 0 0rem;
+    top: 15.125rem;
+  }
+}
+.main__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #F6F6F6;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  gap: 40px;
+}
+@media screen and (max-width: 600px) {
+  .main__container {
+    padding: 0 0px;
+  }
+}
+
+/*  Menu title avec la Palette du goût, avec le coeur */
+.title-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  .title-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 0;
+    padding: 32px 0px 0 12px;
+  }
+}
+.title-menu__heart { /* <--- Le coeur du menu-title  */
+  position: relative;
+  color: black;
+}
+.title-menu__heart i {
+  position: absolute;
+  top: -0.7rem;
+  left: 0;
+  font-size: 1.375rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+@media screen and (max-width: 600px) {
+  .title-menu__heart {
+    left: -5rem;
+  }
+}
+.title-menu__heart .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(0deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.3s ease-out;
+  animation: pulse 2s 0s infinite ease;
+  -webkit-animation: pulse 2s 0s infinite ease;
+}
+.title-menu__heart .fa-solid:hover {
+  opacity: 1;
+}
+
+/*  Conteneur des 3 box, et des 3 languettes  */
+.content-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 2rem;
+  padding: 0 12.5rem;
+  background: #F6F6F6;
+}
+@media screen and (max-width: 992px) {
+  .content-box {
+    grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
+    padding: 0 3.125rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .content-box {
+    grid-template-columns: repeat(auto-fit, minmax(21.8rem, 1fr));
+    padding: 0 12px;
+  }
+}
+
+/*
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+*/
+/*  Conteneur  des 3 languettes  */
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  width: 100%;
+}
+.box .tag-container {
+  display: flex;
+  width: 100%;
+  text-align: left;
+  justify-content: space-between;
+  border-radius: 15px;
+  gap: 0.3125rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.box .tag-container__tag {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box .tag-container__tag h4, .box .tag-container__tag p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box .tag-container__price {
+  position: relative;
+  display: block;
+  padding: 2.2rem 0.8rem 0 0;
+}
+
+/* Bouton en dégradé en dessous de "content-box"  */
+.btn-menu {
+  display: block;
+  padding: 0;
+}
+@media screen and (max-width: 600px) {
+  .btn-menu {
+    padding-bottom: 40px;
+  }
+}
+.btn-menu .menu {
+  padding: 16px 48px;
 }
 
 /*  Animations des languettes  */

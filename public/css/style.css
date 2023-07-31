@@ -702,7 +702,7 @@ footer .footer-content__mention-mail .text2 {
 }
 @media screen and (max-width: 600px) {
   .title-menu__heart {
-    left: -5rem;
+    left: -3rem;
   }
 }
 .title-menu__heart .fa-solid {
@@ -1006,7 +1006,7 @@ footer .footer-content__mention-mail .text2 {
 }
 @media screen and (max-width: 600px) {
   .title-menu__heart {
-    left: -5rem;
+    left: -3rem;
   }
 }
 .title-menu__heart .fa-solid {
@@ -1310,7 +1310,7 @@ footer .footer-content__mention-mail .text2 {
 }
 @media screen and (max-width: 600px) {
   .title-menu__heart {
-    left: -5rem;
+    left: -3rem;
   }
 }
 .title-menu__heart .fa-solid {
@@ -1614,7 +1614,7 @@ footer .footer-content__mention-mail .text2 {
 }
 @media screen and (max-width: 600px) {
   .title-menu__heart {
-    left: -5rem;
+    left: -3rem;
   }
 }
 .title-menu__heart .fa-solid {
